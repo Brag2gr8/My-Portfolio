@@ -13,29 +13,67 @@
     <header>
         <img class="logo" src="./images/logo.png" alt="logo">
         <img class="menu" src="./images/menu.png" alt="menu">
-        <img class="cancel" src="./images/cancel.png" alt="cancel">
+        <img class="cancel hide" src="./images/cancel.png" alt="cancel">
     </header>
 
     <main>
         <section id="hero">
             <img class="dev-pics" src="./images/dev.png" alt="dev picture">
-            <div class="hero-text-container">
-                <h4>Hi, I am</h4>
-                <h1>Emmanuel Ogbuzuru</h1>
-                <p>Frontend React Developer</p>
+            <div class="hero-details-container">
+                <div class="hero-text-container">
+                    <h4>Hi, I am</h4>
+                    <h1>Emmanuel Ogbuzuru</h1>
+                    <p>Frontend React Developer</p>
+                </div>
+                <div class="hero-socials-container">
+                    <img class="email" src="./images/email.png" alt="email">
+                    <img class="github" src="./images/github.png" alt="github">
+                    <img class="linkedin" src="./images/linkedin.png" alt="linkedin">
+                </div>
             </div>
-            <div class="hero-socials-container">
-                <img class="email" src="./images/email.png" alt="email">
-                <img class="github" src="./images/github.png" alt="github">
-                <img class="linkedin" src="./images/linkedin.png" alt="linkedin">
-            </div>
-            <div class="hero-box-rotate"></div>
+        </section>
+        <section id="about">
+            <span class="about-me">ABOUT ME</span>
+            <p>My name is Tomasz Gajda, I'm a third year Applied Computer Science student at the AGH University of Science and Technology in Krakow. I have been learning Front-End technologies for a year and this time was just enough for me to make sure that this is my place in the industry.</p>
+            <p>Membership in the science club developed my design skills, which quickly turned into a new hobby. I am fluent in English (spoken and written) and intermediate Spanish. Apart from designing and programming websites, my passion is all kinds of motorsport - from rallies to the very king of motorsport - formula 1.</p>
+        </section>
+        <section id="skills">
+            <span class="skills-header">SKILLS</span>
+            <h2>Using Now</h2>
+            <div class="skill-logo-container" id="using-now"></div>
+            <h2>Learning</h2>
+            <div class="skill-logo-container" id="learning"></div>
+        </section>
+        <section id="projects">
+            <span class="skills-header">PROJECTS</span>
+            <div id="all-projects-container" class="all-projects-container"></div>
+        </section>
+        <section id="contact">
+            <span class="about-me">CONTACT</span>
+            <p>My name is Emmanuel Ogbuzuru, fill this form to send me a message</p>
+            <img src="./images/seperator.png" alt="seperator">
+            <form class="contact-form">
+                <input type="text" placeholder="Name*" required>
+                <input type="email" placeholder="Email*" required>
+                <input type="tel" placeholder="Phone Number">
+                <textarea placeholder="Your message*" required></textarea>
+                <button>SUBMIT</button>
+            </form>
         </section>
     </main>
 
     <footer>
-
+        <div class="back-to-top">
+            <img src="./images/double-arrow.png" alt="double-arrow">
+            <h3>BACK TO TOP</h3>
+        </div>
+        <div class="footer-socials-container">
+            <img class="email" src="./images/email.png" alt="email">
+            <img class="github" src="./images/github.png" alt="github">
+            <img class="linkedin" src="./images/linkedin.png" alt="linkedin">
+        </div>
+        <p>@2023 Emmanuel Ogbuzuru All Rights Reserved.</p>
     </footer>
-  <script></script>
+    <script src="./index.js" type="module"></script>
 </body>
 </html>
