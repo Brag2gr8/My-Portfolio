@@ -39,6 +39,7 @@ nav {
     display: flex;
     align-items: end;
     justify-content: space-between;
+    overflow: hidden;
     padding: 0;
 }
 
@@ -49,7 +50,17 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: end;
+    /* background: ; */
+}
+
+.rotate-design {
+    position: absolute;
+    transform: rotate(-12deg);
     background: rgba(95, 95, 95, 0.36);
+    width: 180%;
+    height: 100%;
+    top: 40vh;
+    left: 0;
 }
 
 .dev-pics {
@@ -64,7 +75,7 @@ nav {
 .hero-socials-container {
     display: flex;
     flex-direction: column;
-    gap: 5px
+    gap: 5px;
 }
 
 .hero-socials-container {
