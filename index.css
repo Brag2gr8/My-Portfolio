@@ -21,9 +21,19 @@ header {
     padding: 20px 30px;
 }
 
+nav {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    align-items: center;
+    color: var(--white);
+    background: var(--black);
+    padding: 50px;
+}
+
 #hero {
     background-color: var(--black);
-    height: 95vh;
+    height: 70vh;
     color: var(--white);
     position: relative;
     display: flex;
@@ -63,7 +73,6 @@ header {
 
 section {
     background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(26, 21, 21, 0.00) 0%, rgba(1, 1, 1, 0.16) 100%), #FFF;
-    text-align: center;
     padding: 75px 60px 100px;
 }
 

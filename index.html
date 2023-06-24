@@ -10,13 +10,18 @@
     <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@400;500;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header id="header">
         <img class="logo" src="./images/logo.png" alt="logo">
-        <img class="menu" src="./images/menu.png" alt="menu">
-        <img class="cancel hide" src="./images/cancel.png" alt="cancel">
+        <img id="menu" class="menu" src="./images/menu.png" alt="menu">
+        <img id="cancel" class="cancel hide" src="./images/cancel.png" alt="cancel">
     </header>
-
     <main>
+        <nav id="nav" class="hide">
+            <a href="#about" class="nav-link">About me</a>
+            <a href="#skills" class="nav-link">Skills</a>
+            <a href="#projects" class="nav-link">Projects</a>
+            <a href="#contact" class="nav-link">Contact me</a>
+        </nav>
         <section id="hero">
             <img class="dev-pics" src="./images/dev.png" alt="dev picture">
             <div class="hero-details-container">
@@ -63,10 +68,12 @@
     </main>
 
     <footer>
-        <div class="back-to-top">
-            <img src="./images/double-arrow.png" alt="double-arrow">
-            <h3>BACK TO TOP</h3>
-        </div>
+        <a href="#header">
+            <div class="back-to-top">
+                <img src="./images/double-arrow.png" alt="double-arrow">
+                <h3>BACK TO TOP</h3>
+            </div>
+        </a>
         <div class="footer-socials-container">
             <img class="email" src="./images/email.png" alt="email">
             <img class="github" src="./images/github.png" alt="github">

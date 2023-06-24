@@ -3,7 +3,9 @@ import { projects, skills } from "/data.js";
 const usingNow = document.getElementById("using-now")
 const learning = document.getElementById("learning")
 const allProjects = document.getElementById("all-projects-container")
-
+const menuEl = document.getElementById("menu")
+const cancelEl = document.getElementById("cancel")
+const navEl = document.getElementById("nav")
 
 const getUsingNowHtml = () => {
     let html = ""
@@ -77,6 +79,17 @@ const getProjectsHtml = () => {
     return html
 }
 
+menuEl.addEventListener("click", () => {
+    menuEl.classList.add("hide")
+    cancelEl.classList.remove("hide")
+    navEl.classList.remove("hide")
+})
+
+cancelEl.addEventListener("click", () => {
+    navEl.classList.add("hide")
+    cancelEl.classList.add("hide")
+    menuEl.classList.remove("hide")
+})
 
 const render = () => {
     usingNow.innerHTML = getUsingNowHtml()

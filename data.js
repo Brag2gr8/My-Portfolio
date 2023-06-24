@@ -28,7 +28,7 @@ export const projects = [
     },
     {
         id: 0,
-        name: "MovieLife",
+        name: "My Portfolio",
         image: "movielife",
         desc: "MovieLife is a movie discovery platform that helps users explore, find, and track their favorite films.",
         github: "https://github.com/Brag2gr8/MovieLife",
