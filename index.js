@@ -99,21 +99,7 @@ menuEl.onclick = () => {
 document.getElementById("my-form").addEventListener("submit", (e) => {
     e.preventDefault();
 
-    const formData = new FormData(e.target);
-    console.log(formData)
-
-    fetch("submit.php", {
-      method: "POST",
-      body: formData
-    })
-    .then(response => response.text())
-    .then(data => {
-      const messageContainer = document.getElementById("message-container");
-      messageContainer.innerHTML = data;
-    })
-    .catch(error => {
-      console.error(error);
-    });
+    document.getElementById("success-message").style.display = "block";
   });
 
 const render = () => {

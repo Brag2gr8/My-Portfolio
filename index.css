@@ -274,9 +274,10 @@ a {
     font-weight: 700;
 }
 
-#message-container {
+#success-message {
     font-weight: bold;
     height: fit-content;
+    color: greenyellow;
 }
 
 footer {
