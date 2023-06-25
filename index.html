@@ -61,7 +61,12 @@
             <span class="about-me">CONTACT</span>
             <p>My name is Emmanuel Ogbuzuru, fill this form to send me a message</p>
             <img src="./images/seperator.png" alt="seperator">
-            <form name="contact" id="my-form" method="POST" data-netlify="true">
+            <form 
+                name="contact" id="my-form" 
+                method="POST" 
+                data-netlify="true" 
+                data-netlify-recaptcha="true"
+            >
                 <input type="text" name="name" placeholder="Name*" required>
                 <input type="email" name="email" placeholder="Email*" required>
                 <textarea name="message" placeholder="Your message*" required></textarea>
