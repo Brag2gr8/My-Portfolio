@@ -215,7 +215,10 @@ a {
     padding: 5px 10px ;
 }
 
-.project-links div:hover {transform: scale(0.9);}
+.project-links div:hover {
+    transform: scale(0.9);
+    box-shadow: inset 0 0 5px var(--white);
+}
 
 .project-links img {
     width: 20px;
@@ -274,10 +277,17 @@ a {
     font-weight: 700;
 }
 
+#my-form button:hover {
+    transform: scale(0.95);
+    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
 #success-message {
     font-weight: bold;
     height: fit-content;
-    color: greenyellow;
+    color: green;
+    align-self: center;
+    display: none;
 }
 
 footer {
