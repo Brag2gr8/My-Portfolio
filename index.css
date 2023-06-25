@@ -7,28 +7,52 @@
 * {
     padding: 0;
     margin: 0;
+    text-decoration: none;
     box-sizing: border-box;
     font-family: 'Raleway', sans-serif;
 }
 
-.show{display: block;}
-.hide { display: none;}
+header {background: var(--black);}
 
-header {
-    background-color: var(--black);
-    display: flex;
-    justify-content: space-between;
-    padding: 20px 30px;
-}
-
-nav {
+.navbar {
+    padding: 20px 42px 5px;
     display: flex;
     flex-direction: column;
-    gap: 50px;
-    align-items: center;
+    gap: 30px;
+    width: 100%;
     color: var(--white);
-    background: var(--black);
-    padding: 50px;
+}
+
+.nav-icon-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+}
+
+.dropdown-menu {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-self: center;
+    text-align: center;
+    height: 0;
+}
+
+.open {
+    height: fit-content;
+}
+
+.dropdown-menu li {
+    padding: 5px;
+    font-weight: 700;
+}
+
+.dropdown-menu li:hover {
+    background: var(--lesser-white);
+    color: var(--black);
+    border-radius: 6px;
 }
 
 #hero {
@@ -54,12 +78,13 @@ nav {
 }
 
 .rotate-design {
+    z-index: 0;
     position: absolute;
     transform: rotate(-12deg);
     background: rgba(95, 95, 95, 0.36);
     width: 180%;
     height: 100%;
-    top: 40vh;
+    top: 300px;
     left: 0;
 }
 
@@ -80,6 +105,10 @@ nav {
 
 .hero-socials-container {
     gap: 30px
+}
+
+.hero-socials-container i {
+    font-size: 26px;
 }
 
 section {
@@ -166,7 +195,6 @@ section {
 
 a {
     color: inherit;
-    text-decoration: none;
 }
 
 .all-projects-container {
@@ -212,14 +240,14 @@ a {
 
 #contact img {align-self: center;}
 
-.contact-form {
+#my-form {
     display: flex;
     flex-direction: column;
     gap: 50px;
 }
 
-.contact-form input,
-.contact-form textarea {
+#my-form input,
+#my-form textarea {
     background: transparent;
     border: none;
     border-left: 5px solid var(--black);
@@ -230,12 +258,12 @@ a {
     font-weight: 700;
 }
 
-.contact-form input:focus,
-.contact-form textarea:focus {outline: 0;}
+#my-form input:focus,
+#my-form textarea:focus {outline: 0;}
 
-.contact-form textarea { height: 100px;}
+#my-form textarea { height: 100px;}
 
-.contact-form button {
+#my-form button {
     width: fit-content;
     align-self: center;
     padding: 10px 30px;
@@ -244,6 +272,11 @@ a {
     border-left: 5px solid var(--black);
     border-right: 5px solid var(--black);
     font-weight: 700;
+}
+
+#message-container {
+    font-weight: bold;
+    height: fit-content;
 }
 
 footer {
@@ -260,4 +293,82 @@ footer {
 .footer-socials-container {
     display: flex;
     gap: 20px;
+}
+
+
+/*** MEDIA QUERIES ***/
+
+@media screen and (min-width: 400px) and (max-width: 835px) {
+    .dev-pics {
+        width: 180px;
+    }
+}
+
+@media (min-width: 750px) {
+    #menu {
+        display: none;
+    }
+
+    .navbar {
+        flex-direction: row ;
+        justify-content: space-between;
+        padding: 40px 50px;
+    }
+
+    .dropdown-menu {
+        flex-direction: row;
+        height: fit-content;
+    }
+
+    section {
+        padding: 75px 20vw 100px;
+    }
+
+    #hero {
+        justify-content: space-between;
+        padding: 0 10vw;
+        align-items: unset;
+        background: linear-gradient(120deg, rgba(196,196,196,1) 50%, rgba(0,0,0,1) 50%);;
+        color: var(--black)
+    }
+
+    #hero h1 {
+        font-size:35px;
+        background: #C4C4C4;
+        width: fit-content;
+    }
+
+    #hero h4 {font-size:25px}
+    #hero p {font-size:20px}
+
+    .hero-socials-container i {
+        padding: 5px;
+        background: #C4C4C4;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+    }
+
+    .hero-details-container {
+        flex-direction: column;
+        align-items: unset;
+        gap: 100px;
+        justify-content: center;
+    }
+
+    .rotate-design {
+        display: none;
+    }
+    
+    .hero-socials-container { flex-direction: row; }
+
+    .hero-text-container {
+        gap: 10px;
+    }
+
+    .dev-pics {
+        position: unset;
+        width: 30%;
+        z-index: 1;
+    }
+
 }

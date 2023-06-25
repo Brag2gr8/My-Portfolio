@@ -11,19 +11,21 @@
 </head>
 <body>
     <header id="header">
-        <img class="logo" src="./images/logo.png" alt="logo">
-        <img id="menu" class="menu" src="./images/menu.png" alt="menu">
-        <img id="cancel" class="cancel hide" src="./images/cancel.png" alt="cancel">
+        <nav id="nav" class="navbar" >
+            <div class="nav-icon-container">
+                <img class="logo" src="./images/logo.png" alt="logo">
+                <i id="menu" class="fa-solid fa-bars"></i>
+            </div>
+            <ul class="dropdown-menu">
+                <li><a href="#about" class="nav-link">About me</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link">Contact me</a></li>
+            </ul>
+        </nav>
     </header>
     <main>
-        <nav id="nav" class="hide">
-            <a href="#about" class="nav-link">About me</a>
-            <a href="#skills" class="nav-link">Skills</a>
-            <a href="#projects" class="nav-link">Projects</a>
-            <a href="#contact" class="nav-link">Contact me</a>
-        </nav>
         <section id="hero">
-            <img class="dev-pics" src="./images/dev.png" alt="dev picture">
             <div class="hero-details-container">
                 <div class="hero-text-container">
                     <h4>Hi, I am</h4>
@@ -31,11 +33,12 @@
                     <p>Frontend React Developer</p>
                 </div>
                 <div class="hero-socials-container">
-                    <img class="email" src="./images/email.png" alt="email">
-                    <img class="github" src="./images/github.png" alt="github">
-                    <img class="linkedin" src="./images/linkedin.png" alt="linkedin">
+                    <i class="fa-solid fa-at"></i>
+                    <i class="fa-brands fa-github"></i>
+                    <i class="fa-brands fa-linkedin"></i>
                 </div>
             </div>
+            <img class="dev-pics" src="./images/dev.png" alt="dev picture">
             <div class="rotate-design"></div>
         </section>
         <section id="about">
@@ -58,12 +61,12 @@
             <span class="about-me">CONTACT</span>
             <p>My name is Emmanuel Ogbuzuru, fill this form to send me a message</p>
             <img src="./images/seperator.png" alt="seperator">
-            <form class="contact-form">
-                <input type="text" placeholder="Name*" required>
-                <input type="email" placeholder="Email*" required>
-                <input type="tel" placeholder="Phone Number">
-                <textarea placeholder="Your message*" required></textarea>
-                <button>SUBMIT</button>
+            <form id="my-form" method="POST">
+                <input type="text" name="name" placeholder="Name*" required>
+                <input type="email" name="email" placeholder="Email*" required>
+                <textarea name="message" placeholder="Your message*" required></textarea>
+                <button type="submit" >SUBMIT</button>
+                <div id="message-container"></div>
             </form>
         </section>
     </main>
@@ -83,5 +86,6 @@
         <p>@2023 Emmanuel Ogbuzuru All Rights Reserved.</p>
     </footer>
     <script src="./index.js" type="module"></script>
+    <script src="https://kit.fontawesome.com/d333c100e0.js" crossorigin="anonymous"></script>
 </body>
 </html>

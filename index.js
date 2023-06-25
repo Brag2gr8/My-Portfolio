@@ -5,7 +5,15 @@ const learning = document.getElementById("learning")
 const allProjects = document.getElementById("all-projects-container")
 const menuEl = document.getElementById("menu")
 const cancelEl = document.getElementById("cancel")
-const navEl = document.getElementById("nav")
+const dropdownEl = document.querySelector(".dropdown-menu")
+
+// window.addEventListener("resize", () => {
+//     if (window.innerWidth >= 750) {
+//         navEl.classList.remove("hide")
+//       } else if (window.innerWidth < 750) {
+//         navEl.classList.add("hide")
+//       }
+// })
 
 const getUsingNowHtml = () => {
     let html = ""
@@ -79,17 +87,34 @@ const getProjectsHtml = () => {
     return html
 }
 
-menuEl.addEventListener("click", () => {
-    menuEl.classList.add("hide")
-    cancelEl.classList.remove("hide")
-    navEl.classList.remove("hide")
-})
+menuEl.onclick = () => {
+    const isOpen = dropdownEl.classList.contains("open")
+    dropdownEl.classList.toggle("open")
 
-cancelEl.addEventListener("click", () => {
-    navEl.classList.add("hide")
-    cancelEl.classList.add("hide")
-    menuEl.classList.remove("hide")
-})
+    menuEl.classList = isOpen ? 
+        "fa-solid fa-bars" :
+        "fa-solid fa-xmark"
+}
+
+document.getElementById("my-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+
+    const formData = new FormData(e.target);
+    console.log(formData)
+
+    fetch("submit.php", {
+      method: "POST",
+      body: formData
+    })
+    .then(response => response.text())
+    .then(data => {
+      const messageContainer = document.getElementById("message-container");
+      messageContainer.innerHTML = data;
+    })
+    .catch(error => {
+      console.error(error);
+    });
+  });
 
 const render = () => {
     usingNow.innerHTML = getUsingNowHtml()
