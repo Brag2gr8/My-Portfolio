@@ -7,13 +7,24 @@ const menuEl = document.getElementById("menu")
 const cancelEl = document.getElementById("cancel")
 const dropdownEl = document.querySelector(".dropdown-menu")
 
-// window.addEventListener("resize", () => {
-//     if (window.innerWidth >= 750) {
-//         navEl.classList.remove("hide")
-//       } else if (window.innerWidth < 750) {
-//         navEl.classList.add("hide")
-//       }
-// })
+menuEl.onclick = () => {
+    const isOpen = dropdownEl.classList.contains("open")
+    dropdownEl.classList.toggle("open")
+
+    menuEl.classList = isOpen ? 
+        "fa-solid fa-bars" :
+        "fa-solid fa-xmark"
+}
+
+document.getElementById("my-form").addEventListener("submit", (e) => {
+    e.preventDefault();
+    e.target.reset()
+    const success = document.querySelector(".message-container")
+    success.style.display = "block";
+    setTimeout(()=> {
+        success.style.display = "none";
+    }, 5000) 
+});
 
 const getUsingNowHtml = () => {
     let html = ""
@@ -86,21 +97,6 @@ const getProjectsHtml = () => {
     
     return html
 }
-
-menuEl.onclick = () => {
-    const isOpen = dropdownEl.classList.contains("open")
-    dropdownEl.classList.toggle("open")
-
-    menuEl.classList = isOpen ? 
-        "fa-solid fa-bars" :
-        "fa-solid fa-xmark"
-}
-
-document.getElementById("my-form").addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    document.getElementById("success-message").style.display = "block";
-  });
 
 const render = () => {
     usingNow.innerHTML = getUsingNowHtml()

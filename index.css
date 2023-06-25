@@ -239,6 +239,7 @@ a {
     display: flex;
     flex-direction: column;
     gap: 50px;
+    text-align: center;
 }
 
 #contact img {align-self: center;}
@@ -262,7 +263,10 @@ a {
 }
 
 #my-form input:focus,
-#my-form textarea:focus {outline: 0;}
+#my-form textarea:focus {
+    outline: 0;
+    color: var(--black);
+}
 
 #my-form textarea { height: 100px;}
 
@@ -282,12 +286,32 @@ a {
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
 }
 
+.message-container {
+    display: none;
+}
+
 #success-message {
     font-weight: bold;
     height: fit-content;
     color: green;
     align-self: center;
-    display: none;
+}
+
+#line {
+    margin-top: 5px;
+    width: 100%;
+    height: 3px;
+    background-color: green;
+    animation: reduce-length 5s linear forwards;
+}
+
+@keyframes reduce-length {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
 }
 
 footer {
@@ -380,6 +404,11 @@ footer {
         position: unset;
         width: 30%;
         z-index: 1;
+    }
+
+    #contact {
+        padding-left: 30%;
+        padding-right: 30%;
     }
 
 }
