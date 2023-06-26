@@ -81,11 +81,11 @@ const getProjectsHtml = () => {
                     </div>
                     <p>${desc}</p>
                     <div class="project-links">
-                        <a href="${github}" target="_blank"><div>
+                        <a href="https://github.com/brag2gr8/${github}" target="_blank"><div>
                             <p>Code</p>
                             <img class="github" src="./images/github.png" alt="github">
                         </div></a>
-                        <a href="${demo}" target="_blank"><div>
+                        <a href="https://${demo}.netlify.app" target="_blank"><div>
                             <p>Demo</p>
                             <img class="link" src="./images/link.png" alt="link">
                         </div></a>

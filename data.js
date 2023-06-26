@@ -1,11 +1,11 @@
 export const projects = [
     {
         id: 0,
-        name: "MovieLife",
-        image: "movielife",
-        desc: "MovieLife is a movie discovery platform that helps users explore, find, and track their favorite films.",
-        github: "https://github.com/Brag2gr8/MovieLife",
-        demo:  "https://movielife.netlify.app",
+        name: "My Portfolio",
+        image: "portfolio",
+        desc: "An introductory website with the developer details and his best works.",
+        github: "My-Portfolio",
+        demo:  "bragg",
         skills: ["figma", "react", "css", "firestore"]
     },
     {
@@ -13,8 +13,8 @@ export const projects = [
         name: "MovieLife",
         image: "movielife",
         desc: "MovieLife is a movie discovery platform that helps users explore, find, and track their favorite films.",
-        github: "https://github.com/Brag2gr8/MovieLife",
-        demo:  "https://movielife.netlify.app",
+        github: "Movielife",
+        demo:  "movielife",
         skills: ["figma", "react", "css", "firestore"]
     },
     {
@@ -22,7 +22,7 @@ export const projects = [
         name: "MovieLife",
         image: "movielife",
         desc: "MovieLife is a movie discovery platform that helps users explore, find, and track their favorite films.",
-        github: "https://github.com/Brag2gr8/MovieLife",
+        github: "Movielife",
         demo:  "https://movielife.netlify.app",
         skills: ["figma", "react", "css", "firestore"]
     },
@@ -31,7 +31,7 @@ export const projects = [
         name: "My Portfolio",
         image: "movielife",
         desc: "MovieLife is a movie discovery platform that helps users explore, find, and track their favorite films.",
-        github: "https://github.com/Brag2gr8/MovieLife",
+        github: "Movielife",
         demo:  "https://movielife.netlify.app",
         skills: ["figma", "react", "css", "firestore"]
     },
