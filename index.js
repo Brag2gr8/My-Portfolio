@@ -1,11 +1,15 @@
-import { projects, skills } from "/data.js";
+import { projects, skills } from "/data.js"
 
+const downloadButton = document.querySelector('.download-btn')
+const downloadMessage = document.querySelector(".download-message-container")
+const consentCheckbox = document.getElementById('consent-checkbox')
 const usingNow = document.getElementById("using-now")
 const learning = document.getElementById("learning")
 const allProjects = document.getElementById("all-projects-container")
 const menuEl = document.getElementById("menu")
-const cancelEl = document.getElementById("cancel")
 const dropdownEl = document.querySelector(".dropdown-menu")
+
+AOS.init()
 
 menuEl.onclick = () => {
     const isOpen = dropdownEl.classList.contains("open")
@@ -17,14 +21,33 @@ menuEl.onclick = () => {
 }
 
 // document.getElementById("my-form").addEventListener("submit", (e) => {
-//     e.preventDefault();
+//     e.preventDefault()
 //     e.target.reset()
 //     const success = document.querySelector(".message-container")
-//     success.style.display = "block";
+//     success.style.display = "block"
 //     setTimeout(()=> {
-//         success.style.display = "none";
+//         success.style.display = "none"
 //     }, 5000) 
-// });
+// })
+
+
+
+downloadButton.onclick = () => {
+  if (consentCheckbox.checked) {
+    const resumeUrl = "https://drive.google.com/uc?export=download&id=13qReKLk0lN6tI3qmmE_SD1SUi7YChQM0"
+
+    const downloadLink = document.createElement('a')
+    downloadLink.href = resumeUrl
+    downloadLink.download = 'resume.pdf' 
+    downloadLink.click()
+    downloadMessage.style.display = "block"
+    setTimeout(()=> {
+        downloadMessage.style.display = "none"
+    }, 5000) 
+  } else {
+    alert("Please give your consent to download my resume.")
+  }
+}
 
 const getUsingNowHtml = () => {
     let html = ""
@@ -72,7 +95,7 @@ const getProjectsHtml = () => {
         })
     
         html += `
-            <div class="project-container">
+            <div class="project-container"  data-aos="zoom-in">
                 <img src="./images/${image}.png">
                 <div class="project-info">
                     <h2>${name}</h2>

@@ -6,7 +6,7 @@ export const projects = [
         desc: "An introductory website with the developer details and his best works.",
         github: "My-Portfolio",
         demo:  "bragg",
-        skills: ["figma", "react", "css", "firestore"]
+        skills: ["figma", "html", "css", "js"]
     },
     {
         id: 0,
@@ -15,25 +15,25 @@ export const projects = [
         desc: "MovieLife is a movie discovery platform that helps users explore, find, and track their favorite films.",
         github: "Movielife",
         demo:  "movielife",
-        skills: ["figma", "react", "css", "firestore"]
+        skills: ["figma", "react", "css", "firestore", "api"]
     },
     {
         id: 0,
-        name: "MovieLife",
-        image: "movielife",
+        name: "ShopLife",
+        image: "coming-soon",
         desc: "MovieLife is a movie discovery platform that helps users explore, find, and track their favorite films.",
-        github: "Movielife",
-        demo:  "https://movielife.netlify.app",
-        skills: ["figma", "react", "css", "firestore"]
+        github: "Shoplife",
+        demo:  "shoplife",
+        skills: ["figma", "react", "css", "firestore", "api"]
     },
     {
         id: 0,
-        name: "My Portfolio",
-        image: "movielife",
-        desc: "MovieLife is a movie discovery platform that helps users explore, find, and track their favorite films.",
-        github: "Movielife",
-        demo:  "https://movielife.netlify.app",
-        skills: ["figma", "react", "css", "firestore"]
+        name: "Quizzical",
+        image: "quizzical",
+        desc: "Quizzical is a solo project I made while learning with Scrimba. Answer questions and view scores.",
+        github: "quizzical",
+        demo:  "inspiring-praline-02963a",
+        skills: [, "react", "css", "api"]
     },
 ]
 
@@ -67,6 +67,10 @@ export const skills = [
             name: "FIRESTORE",
             icon: "firestore"
         },
+        {
+            name: "API",
+            icon: "api"
+        }
     ],
     [
         {
