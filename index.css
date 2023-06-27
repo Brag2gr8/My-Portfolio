@@ -195,6 +195,10 @@ section {
 .project-container {
     width: 100%;
     border: 1px solid var(--lesser-white);
+    background-color: var(--black);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }
 
 .project-container,
@@ -209,8 +213,10 @@ section {
 
 .project-tools-container {
     display: flex;
+    align-items: center;
     gap: 30px;
 }
+
 .project-tools-container img { width: 20px; height: 30px;}
 
 .project-links {
@@ -252,8 +258,8 @@ a {
 
 .project-links p {font-size: 14px;}
 
+
 .project-info {
-    background-color: var(--black);
     padding: 30px;
     display: flex;
     flex-direction: column;
