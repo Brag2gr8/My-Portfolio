@@ -20,15 +20,15 @@ menuEl.onclick = () => {
         "fa-solid fa-xmark"
 }
 
-// document.getElementById("my-form").addEventListener("submit", (e) => {
-//     e.preventDefault()
-//     e.target.reset()
-//     const success = document.querySelector(".message-container")
-//     success.style.display = "block"
-//     setTimeout(()=> {
-//         success.style.display = "none"
-//     }, 5000) 
-// })
+document.getElementById("my-form").addEventListener("submit", (e) => {
+    e.preventDefault()
+    e.target.reset()
+    const success = document.querySelector(".message-container")
+    success.style.display = "block"
+    setTimeout(()=> {
+        success.style.display = "none"
+    }, 5000) 
+})
 
 
 
