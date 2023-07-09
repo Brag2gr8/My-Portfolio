@@ -36,33 +36,26 @@ downloadButton.onclick = () => {
   if (consentCheckbox.checked) {
     const resumeUrl = "https://drive.google.com/uc?export=download&id=13qReKLk0lN6tI3qmmE_SD1SUi7YChQM0";
 
-    const downloadLink = document.createElement('a');
-    downloadLink.href = resumeUrl;
-    downloadLink.download = 'resume.pdf';
-    
     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
     const isMobile = /android|iPad|iPhone|iPod/i.test(userAgent);
     
     if (isMobile) {
-      // For mobile devices, display a direct link instead of automatic download
-      downloadLink.target = '_blank';
-      downloadLink.textContent = 'Download Resume';
-      downloadLink.style.display = 'block';
-      downloadButton.parentNode.insertBefore(downloadLink, downloadButton.nextSibling);
+      window.open(resumeUrl, '_blank');
     } else {
-      downloadLink.style.display = 'none'; // Hide the download link on desktop
+      const downloadLink = document.createElement('a');
+      downloadLink.href = resumeUrl;
+      downloadLink.download = 'resume.pdf'; 
+      downloadLink.click();
     }
     
-    downloadLink.click();
     downloadMessage.style.display = "block";
-    setTimeout(() => {
-      downloadMessage.style.display = "none";
-    }, 5000);
+    setTimeout(()=> {
+        downloadMessage.style.display = "none";
+    }, 5000) 
   } else {
     alert("Please give your consent to download my resume.");
   }
 };
-
 
 
 const getUsingNowHtml = () => {
