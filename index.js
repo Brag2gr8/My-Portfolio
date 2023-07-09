@@ -38,16 +38,23 @@ downloadButton.onclick = () => {
 
     const downloadLink = document.createElement('a')
     downloadLink.href = resumeUrl
-    downloadLink.download = 'resume.pdf' 
-    downloadLink.click()
-    downloadMessage.style.display = "block"
-    setTimeout(()=> {
-        downloadMessage.style.display = "none"
-    }, 5000) 
+    downloadLink.download = 'resume.pdf'
+    
+    if (typeof downloadLink.download === 'undefined') {
+      // For mobile devices that don't support automatic downloads
+      downloadLink.target = '_blank';
+    }
+    
+    downloadLink.click();
+    downloadMessage.style.display = "block";
+    setTimeout(() => {
+      downloadMessage.style.display = "none";
+    }, 5000);
   } else {
-    alert("Please give your consent to download my resume.")
+    alert("Please give your consent to download my resume.");
   }
 }
+
 
 const getUsingNowHtml = () => {
     let html = ""
