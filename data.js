@@ -20,7 +20,7 @@ export const projects = [
     {
         id: 0,
         name: "ShopLife",
-        image: "coming-soon",
+        image: "shoplife",
         desc: "MovieLife is a movie discovery platform that helps users explore, find, and track their favorite films.",
         github: "Shoplife",
         demo:  "shoplife",
