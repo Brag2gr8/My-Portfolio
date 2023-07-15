@@ -1,8 +1,8 @@
 import { projects, skills } from "/data.js"
 
-const downloadButton = document.querySelector('.download-btn')
-const downloadMessage = document.querySelector(".download-message-container")
-const consentCheckbox = document.getElementById('consent-checkbox')
+// const downloadButton = document.querySelector('.download-btn')
+// const downloadMessage = document.querySelector(".download-message-container")
+// const consentCheckbox = document.getElementById('consent-checkbox')
 const usingNow = document.getElementById("using-now")
 const learning = document.getElementById("learning")
 const allProjects = document.getElementById("all-projects-container")
@@ -32,30 +32,30 @@ document.getElementById("my-form").addEventListener("submit", (e) => {
 
 
 
-downloadButton.onclick = () => {
-  if (consentCheckbox.checked) {
-    const resumeUrl = "https://drive.google.com/uc?export=download&id=13qReKLk0lN6tI3qmmE_SD1SUi7YChQM0";
+// downloadButton.onclick = () => {
+//   if (consentCheckbox.checked) {
+//     const resumeUrl = "https://drive.google.com/uc?export=download&id=13qReKLk0lN6tI3qmmE_SD1SUi7YChQM0";
 
-    const userAgent = navigator.userAgent || navigator.vendor || window.opera;
-    const isMobile = /android|iPad|iPhone|iPod/i.test(userAgent);
+//     const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+//     const isMobile = /android|iPad|iPhone|iPod/i.test(userAgent);
     
-    if (isMobile) {
-      window.open(resumeUrl, '_blank');
-    } else {
-      const downloadLink = document.createElement('a');
-      downloadLink.href = resumeUrl;
-      downloadLink.download = 'resume.pdf'; 
-      downloadLink.click();
-    }
+//     if (isMobile) {
+//       window.open(resumeUrl, '_blank');
+//     } else {
+//       const downloadLink = document.createElement('a');
+//       downloadLink.href = resumeUrl;
+//       downloadLink.download = 'resume.pdf'; 
+//       downloadLink.click();
+//     }
     
-    downloadMessage.style.display = "block";
-    setTimeout(()=> {
-        downloadMessage.style.display = "none";
-    }, 5000) 
-  } else {
-    alert("Please give your consent to download my resume.");
-  }
-};
+//     downloadMessage.style.display = "block";
+//     setTimeout(()=> {
+//         downloadMessage.style.display = "none";
+//     }, 5000) 
+//   } else {
+//     alert("Please give your consent to download my resume.");
+//   }
+// };
 
 
 const getUsingNowHtml = () => {
