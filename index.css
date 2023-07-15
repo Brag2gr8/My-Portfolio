@@ -16,6 +16,8 @@ html {
     font-family: 'Raleway', sans-serif;
 }
 
+/***  HEADER  ***/
+
 header {background: var(--black);}
 
 .navbar {
@@ -59,6 +61,8 @@ header {background: var(--black);}
     border-radius: 6px;
 }
 
+/***  HERO  ***/
+
 #hero {
     background-color: var(--black);
     height: 70vh;
@@ -97,6 +101,8 @@ header {background: var(--black);}
     bottom: 0;
     width: 50%;
     max-width: 250px;
+    max-height: 600px;
+    align-self: end;
 }
 
 .hero-text-container,
@@ -131,6 +137,8 @@ section {
     font-weight: 700;
 }
 
+/***  ABOUT  ***/
+
 #about {
     display: flex;
     flex-direction: column;
@@ -162,6 +170,8 @@ section {
     display: none;
 }
 
+/***  SKILLS  ***/
+
 .skills-header {
     padding: 15px 40px;
     margin-bottom: 70px;
@@ -185,6 +195,8 @@ section {
 .skill-logo-container img {
     height: 80px;
 }
+
+/***  PROJECTS  ***/
 
 #projects {
     background: rgba(29, 29, 29, 1);
@@ -271,6 +283,8 @@ a {
     gap: 30px
 }
 
+/***  CONTACT  ***/
+
 #contact { 
     display: flex;
     flex-direction: column;
@@ -344,14 +358,7 @@ a {
     animation: reduce-length 5s linear forwards;
 }
 
-@keyframes reduce-length {
-    0% {
-        width: 100%;
-    }
-    100% {
-        width: 0%;
-    }
-}
+/***  FOOTER  ***/
 
 footer {
     color: #d6d6d6;
@@ -378,11 +385,23 @@ footer {
     color: var(--black);
 }
 
-.footer-socials-container i:hover {
+.footer-socials-container i:hover,
+.hero-socials-container i:hover {
     box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.3);
     transform: scale(0.95)
 }
 
+/***  KEYFRAMES  ***/
+
+
+@keyframes reduce-length {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
+}
 
 /***  MEDIA QUERIES  ***/
 

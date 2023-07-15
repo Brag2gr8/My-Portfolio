@@ -21,7 +21,7 @@ export const projects = [
         id: 0,
         name: "ShopLife",
         image: "shoplife",
-        desc: "MovieLife is a movie discovery platform that helps users explore, find, and track their favorite films.",
+        desc: "ShopLife is an e-commerce web app that allows users to browse and purchase products online. It provides a seamless shopping experience.",
         github: "Shoplife",
         demo:  "shoplife",
         skills: ["figma", "react", "css", "firestore", "api"]
