@@ -30,8 +30,6 @@ menuEl.onclick = () => {
 //     }, 5000) 
 // })
 
-
-
 downloadButton.onclick = () => {
   if (consentCheckbox.checked) {
     const resumeUrl = "https://drive.google.com/uc?export=download&id=13qReKLk0lN6tI3qmmE_SD1SUi7YChQM0";
