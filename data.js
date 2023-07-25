@@ -70,29 +70,27 @@ export const skills = [
         {
             name: "API",
             icon: "api"
-        }
-    ],
-    [
-        {
-            name: "TYPESCRIPT",
-            icon: "ts"
         },
-        {
-            name: "NODE",
-            icon: "node"
-        },
-        {
-            name: "SOLIDITY",
-            icon: "solidity"
-        },
-        {
-            name: "ETHER",
-            icon: "ether"
-        },
-        {
-            name: "WEB3",
-            icon: "web3"
-        },
+        // {
+        //     name: "TYPESCRIPT",
+        //     icon: "ts"
+        // },
+        // {
+        //     name: "NODE",
+        //     icon: "node"
+        // },
+        // {
+        //     name: "SOLIDITY",
+        //     icon: "solidity"
+        // },
+        // {
+        //     name: "ETHER",
+        //     icon: "ether"
+        // },
+        // {
+        //     name: "WEB3",
+        //     icon: "web3"
+        // },
     ]
 
 ]

@@ -77,7 +77,6 @@ header {background: var(--black);}
 
 .hero-details-container {
     padding: 33px 42px 37px ;
-    z-index: 1;
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -91,7 +90,7 @@ header {background: var(--black);}
     background: rgba(95, 95, 95, 0.36);
     width: 180%;
     height: 100%;
-    top: 300px;
+    top: 60%;
     left: 0;
 }
 
@@ -99,9 +98,9 @@ header {background: var(--black);}
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 50%;
-    max-width: 250px;
-    max-height: 600px;
+    width: 40%;
+    max-height: 100%;
+    max-width: 200px;
     align-self: end;
 }
 
@@ -110,6 +109,7 @@ header {background: var(--black);}
     display: flex;
     flex-direction: column;
     gap: 5px;
+    z-index: 1;
 }
 
 .hero-socials-container {
@@ -123,6 +123,7 @@ header {background: var(--black);}
 section {
     background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(26, 21, 21, 0.00) 0%, rgba(1, 1, 1, 0.16) 100%), #FFF;
     padding: 75px 60px 100px;
+    overflow: auto;
 }
 
 .about-me,
@@ -406,9 +407,9 @@ footer {
 /***  MEDIA QUERIES  ***/
 
 @media screen and (min-width: 400px) and (max-width: 835px) {
-    .dev-pics {
+    /* .dev-pics {
         width: 180px;
-    }
+    } */
 }
 
 @media (min-width: 750px) {
@@ -475,6 +476,8 @@ footer {
     .dev-pics {
         position: unset;
         width: 30%;
+        max-height: 90%;
+        max-width: 200px;
         z-index: 1;
     }
 

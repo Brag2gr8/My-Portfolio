@@ -71,20 +71,20 @@ const getUsingNowHtml = () => {
     return html
 }
 
-const getLearningHtml = () => {
-    let html = ""
+// const getLearningHtml = () => {
+//     let html = ""
 
-    skills[1].map(skill => {
-        html += `
-            <div>
-                <img src="/images/${skill.icon}.png" alt="${skill.icon} logo" >
-                <p>${skill.name}</p>
-            </div>
-        `
-    })
+//     skills[1].map(skill => {
+//         html += `
+//             <div>
+//                 <img src="/images/${skill.icon}.png" alt="${skill.icon} logo" >
+//                 <p>${skill.name}</p>
+//             </div>
+//         `
+//     })
 
-    return html
-}
+//     return html
+// }
 
 
 const getProjectsHtml = () => {
@@ -130,7 +130,7 @@ const getProjectsHtml = () => {
 
 const render = () => {
     usingNow.innerHTML = getUsingNowHtml()
-    learning.innerHTML = getLearningHtml()
+    // learning.innerHTML = getLearningHtml()
     allProjects.innerHTML = getProjectsHtml()
 }
 
