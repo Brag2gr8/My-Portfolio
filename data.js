@@ -52,6 +52,10 @@ export const skills = [
             icon: "js"
         },
         {
+            name: "TYPESCRIPT",
+            icon: "ts"
+        },
+        {
             name: "REACT",
             icon: "react"
         },
@@ -62,10 +66,6 @@ export const skills = [
         {
             name: "GIT",
             icon: "git"
-        },
-        {
-            name: "FIRESTORE",
-            icon: "firestore"
         },
         {
             name: "API",
