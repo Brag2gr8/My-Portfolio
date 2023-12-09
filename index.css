@@ -120,7 +120,7 @@ header {background: var(--black);}
     font-size: 26px;
 }
 
-section {
+main > section {
     background: radial-gradient(50% 50.00% at 50% 50.00%, rgba(26, 21, 21, 0.00) 0%, rgba(1, 1, 1, 0.16) 100%), #FFF;
     padding: 75px 60px 100px;
     overflow: auto;
@@ -428,7 +428,7 @@ footer {
         height: fit-content;
     }
 
-    section {
+    main > section {
         padding: 75px 20vw 100px;
     }
 
